@@ -1,0 +1,28 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Menu on mobile 
+%menu-item-on-mobile {
+    background-color: rgba($black, .8);
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid $white;
+}
+
+%menu-item {
+    @include mq(medium) {
+        background-color: transparent;
+        border: none;
+        display: inline-block;
+        float: left;
+        margin-right: 28px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

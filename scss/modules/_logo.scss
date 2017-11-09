@@ -1,0 +1,8 @@
+.logo {
+    @include e(text) {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+    }
+}

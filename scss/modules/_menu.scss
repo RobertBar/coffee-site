@@ -1,0 +1,71 @@
+.menu  {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: center;
+    padding-top: em(20px);    
+
+    &__title {
+        color: $color-primary;
+        flex:  0 0 100%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    @include e(container) {
+        flex: 0 0 100%;
+        margin-bottom: 2%;
+        padding-top: 0px;
+
+        @include mq(medium) {
+            flex: 0 0 46%;
+            margin-left: 2%;
+            padding: 15px 20px;
+        }
+    } 
+
+    @include e(item) {
+        display: flex;
+        flex-flow: row wrap;
+
+        @include m(title) {
+            flex: 0 0 80%; 
+            text-transform: uppercase;
+            color: $color-primary;
+        }
+
+        @include m(description) {
+            display: none; 
+            color: $white;            
+        }
+
+        @include m(price) {
+            flex: 0 0 20%;
+            text-align: right;
+            color: $color-primary;
+        }
+
+        @include mq(medium) {
+            @include m(title) {
+                flex: 0 0 85%;
+                margin-bottom: 10px;
+                margin-top: 0;
+                order: -1;
+            }
+            
+            @include m(description) {
+                display: inline-block;
+                flex: 0 0 85%;
+                margin-bottom: 0;
+                margin-top: 0;            
+                order: 1;
+            }
+            @include m(price) {
+                margin-top: 0px;
+                margin-bottom: 0;
+                flex: 0 0 15%;
+                text-align: right;
+                font-size: em(18.72px);
+            }
+        }
+    }
+}

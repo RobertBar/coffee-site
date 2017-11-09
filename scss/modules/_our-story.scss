@@ -1,0 +1,27 @@
+.our-story {
+    @include mq(medium) {
+        background-image: url('../img/our-story-bg.png');
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-size: 60% 100%;
+    }
+    @include e(paragraph) {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        max-width: 450px;
+        font-family: $font-family--primary;
+        line-height: 1.7;
+        text-align: justify;
+    }
+    .grid__col--6:first-of-type {
+        @extend %clearfix;
+    }
+    @include e(section) {
+        @include m(extra-padding) {
+            @include mq(medium) {
+                padding-left: em(40px);
+                padding-right: em(40px);
+            }
+        }
+    }
+}

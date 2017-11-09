@@ -1,0 +1,43 @@
+.stylish-text {
+
+    @include m(white) {
+        color: $white;
+    }
+
+    @include e(primary) {
+        color: $color-primary;;
+        font-size: em(60px);
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: $font-family--secondary;
+        position: relative;
+        z-index: 2;
+
+        &--bigger {
+            font-size: em(80px);
+        }
+    }
+
+    @include e(secondary) {
+        font-family: $font-family--primary;
+        font-size: em(35px);
+        font-weight: $font-weight--bold;
+        margin-top: -38px;
+        margin-left:  20px;
+        margin-bottom: 0;
+        font-family: $font-family--primary;
+        text-transform: uppercase;
+
+        @include m(bigger) {
+            margin-top: -43px;
+            margin-left:  28px;
+            font-size: em(65px);
+            font-weight: $font-weight--ultra-bold;
+        }
+    }
+
+    @include m(centered) {
+        text-align: center;
+    }
+}
+

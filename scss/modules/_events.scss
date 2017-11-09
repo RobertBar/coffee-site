@@ -1,0 +1,63 @@
+.events {
+    display: flex;
+    flex-flow: row wrap;
+
+    @include e(container) {
+        flex: 0 0 100%;
+        display: flex;
+        flex-flow: row wrap;
+
+        @include mq(medium) {
+                margin: 5% 0;
+        }
+    }
+
+    @include e(item) {
+        flex: 0 0 100%;
+        text-align: center;
+        position: relative;
+        margin-bottom: 4%;
+    }
+
+    @include mq(medium) {
+        @include e(item) {
+            flex: 0 0 33.33%;
+            margin-bottom: 0;
+        }
+    }
+
+    @include e(overlay-container) {
+        position: absolute;
+        top: 0;
+        height: 98.9%;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-color: rgba($color-primary, .4);
+        transition: all .3s ease-out;
+
+        &:hover {
+            background-color: rgba($color-primary, .6);
+        }
+
+        @include m(blue) {
+            background-color: rgba(245, 201, 245, .4);
+
+            &:hover {
+                background-color: rgba(245, 201, 245, .6);
+            }
+        }
+
+    }
+
+    @include e(overlay-title) {
+        position: relative;
+        top: 60%;
+        color: $white;
+        font-size: em(25px);
+        font-weight: $font-weight--light;
+        text-align: left;
+        padding: 4%;
+    }
+
+}

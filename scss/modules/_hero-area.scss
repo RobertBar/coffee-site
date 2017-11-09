@@ -1,0 +1,17 @@
+.hero-area {
+    position: relative;
+
+    @include e(welcome) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    @include e(logo) {
+        position: relative;
+        top:-15px;
+    }
+}

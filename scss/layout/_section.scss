@@ -1,0 +1,38 @@
+.section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+
+
+    @include mq(medium) {
+        
+        padding-top: em(50px);
+        padding-bottom:em(50px);
+
+        @include m(--extra-padding) {
+            padding-top: em(75px);
+            padding-bottom:em(75px);
+        }
+    }
+
+    @include m(menu) {
+        background-image: url('../img/menu-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @include m(training) {
+        background-image: url('../img/barista-training-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    @include m(dark) {
+        background-color: palette(black, base);
+    }
+
+    @include m(blue) {
+        background-color: aqua;
+    }
+    
+}

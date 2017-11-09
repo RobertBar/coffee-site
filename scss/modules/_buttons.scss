@@ -1,0 +1,20 @@
+.btn {
+    padding: 17px 44px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5%;
+
+    &:focus {
+        outline: none;
+    }
+
+    &--gold {
+        background-color: $color-primary;
+        color: $white;
+
+        &:hover {
+            background-color: rgba($color-primary, .7);
+        }
+    } 
+}

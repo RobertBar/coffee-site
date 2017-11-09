@@ -1,0 +1,19 @@
+.nav {
+    @include mq(medium) {
+        float: right;
+    }
+    margin: 0;
+    padding: 0;
+
+    @include e(item) {
+        @extend %menu-item-on-mobile;
+        @extend %menu-item;
+
+        a {
+            font-size: em(12px);
+            color: $white;
+            text-decoration: none;
+            
+        }
+    }
+}

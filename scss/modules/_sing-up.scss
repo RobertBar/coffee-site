@@ -1,0 +1,46 @@
+.sing-up {
+    display: flex;
+    flex-flow: row wrap;
+
+    @include e(container) {
+        flex: 0 0 75%;
+        margin: 5% auto;
+    }
+
+    @include e(description) {
+        color: $white;
+        text-align: center;
+    }
+
+    @include e(form) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-top: 5%;
+    }
+
+    @include e(form-item) {
+        flex: 0 0 100%;
+        margin-bottom: 2%;       
+        @include mq(medium) {
+        margin-bottom: 0;       
+        flex: 0 0 20%;        
+        }
+        @include m(select) {
+            padding: 15px;
+            background: transparent;
+            border: 1px solid $color-primary;
+            border-radius: 5px;
+            color: $color-primary;
+
+            &:focus {
+                outline: none;
+            }
+
+            &>option {
+                padding: 15px;
+                border-bottom: 1px solid grey;
+            }
+        }
+    }
+}
